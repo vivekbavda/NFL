@@ -1,3 +1,35 @@
+# Bavda Consulting
+
+# Vivek Bavda
+
+
+# *"On any given Sunday, you are either going to win or lose."
+
+
+## Problem Statement
+
+The above quote from Al Pacino's character in the movie *Any Given Sunday* is interpretable as a search for certainty in a high stakes world with no uncertainty. While there is no certainty in football except this aphorism, wouldn't be interesting if we could take at least a little bit of the uncertainty out of who will win? No doubt, the games have to be played. However, this analysis attempts to use supervised machine learning to predict winners and losers from 2020 NFL football gamesand beyond. This, of course is the holy grail. While NFL fans believe with absolute certainty that they are Nostradamus, these predictions often lead to disappointment and the loss of money at casinos. Moreover, given the U.S. Supreme Court's decision to remove the restrictions on sports betting in states, NFL fans are lining up outside the door to make bets including the author of this study. Win or lose--if you take the time to read this study, you will see one individual's path attempt to hold the Holy Grail.
+
+Recommendation: While there are multiple sources of data including ESPN, Football Outsiders, and Pro Football Focus, this study finds the data from Football Outsiders to be the most relevant to determining a high probability predictions. Moreover, the use of a GridThere are differences in language in these two subreddits, but both are good.. Use the Random Forests model to choose Apple or Google customer service by entering  you company's subreddit posts or a targeted subreddit posts and see whether the model predicts Google or Apple. By identifying your customers' needs and desires, this model could guide you to which company to imitate. 
+
+## Table of Contents in the Repository
+
+
+
+
+
+
+## Analysis and Conclusions
+
+As the introduction explains, Mr. Amir Payeebaj of ANEC-NOC has hired Bavda Consulting to develop a model that will help ANEC-NOC decide whether to choose the Google or Apple customer service models.
+
+The production model chosen is Random Forests for several reasons, most importantly, that the Cross Validation Score, Accuracy, Precision, Recall, and F1 Score were the highest for Random Forests above its competitors. 
+
+The second recommendation is based off a polarity analysis that was done above. A polarity analysis is how positive or negative a group of text is. If one looks at the histogram of Google and Apple subreddits above, they nearly overlap each other. The measures of central tendency, meaning mean and median, are relatively close. Given this similarity, it may be that both Apple and Google are good models to follow. Perhaps combining their strategies might be the best for your company.
+
+The third recommendation is that instead of trying to see whether Apple or Google have a better model, focus on your customers. It may be that Apple is good for its customers, and Google is good for its customers. Finding out what your company's customers like may be key to determining whom you should imitate. Using the Random Forests model developed, Logistic Regression model in combination, or all three models averaged, enter you company's subreddit posts and see whether the model predicts Google or Apple. By identifying your customers' needs and desires, this model could guide you to which company to imitate. Moreover, you can identify other subreddits that contain customers you would like to seek. Use their subreddit posts as the independent variable to determine whether Google or Apple is better for you.
+
+
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Data Science: Capstone Project
 
 The Capstone Project is divided into 5 deliverables, each building on top of skills learned previously to scaffold students' learning over the entire course. Project deliverables include objectives, requirements, rubrics, and suggested resources - all of which tie into the overall competencies for this course.
