@@ -10,13 +10,12 @@
 
 The above quote from Al Pacino's character in the movie *Any Given Sunday* is interpretable as a search for certainty in a high stakes world with no uncertainty. While there is no certainty in football except this aphorism, wouldn't be interesting if we could take at least a little bit of the uncertainty out of who will win? No doubt, the games have to be played. However, this analysis attempts to use supervised machine learning to predict winners and losers from 2020 NFL football gamesand beyond. This, of course is the holy grail. While NFL fans believe with absolute certainty that they are Nostradamus, these predictions often lead to disappointment and the loss of money at casinos. Moreover, given the U.S. Supreme Court's decision to remove the restrictions on sports betting in states, NFL fans are lining up outside the door to make bets including the author of this study. Win or lose--if you take the time to read this study, you will see one individual's path attempt to hold the Holy Grail.
 
-Recommendation: While there are multiple sources of data including ESPN, Football Outsiders, Sports Betting Books(the wisdom of the crowd), and Pro Football Focus, this study finds the data from Football Outsiders with the wisdom of the crowd to be the most relevant to determining high probability predictions. Moreover, the use of a Grid Searched Support Vector Machine to model this data reaches a 68% accuracy on cross validated data in predicting NFL winners and losers from week to week, 
+Recommendation: While there are multiple sources of data including ESPN, Football Outsiders, Sports Betting Books(the wisdom of the crowd), and Pro Football Focus, this study finds the data from Football Outsiders with the wisdom of the crowd to be the most relevant to determining high probability predictions. Moreover, using a Grid Searched Voter Classification model, this data reaches a 66% accuracy on cross validated data in predicting NFL winners and losers from week to week, 
 
 ## Table of Contents in the Repository
 
 
-A Jupyter Notebook 
-BavdaConsultingNFLCapstone  showing the introduction, background, outside research, data set information, and data collection function, processing, modeling, and conclusion.
+A Jupyter Notebook BavdaNFLCapstone  showing the introduction, background, outside research, data set information, and data collection function, processing, modeling, and conclusion.
 
 The following are the datasets in the Data Folder in the repository:
 
@@ -92,25 +91,23 @@ And this Readme.md
 
 ## Analysis and Conclusions
 
-As the introduction explains, the NFL is full of uncertainty. It has more parity than any other sport. To be able to measure it and quantify it requires immense precision. To most, it would be the Holy Grail of sports prediction. In this endeavor, I would make three recommendations.
-
-First, the production model chosen is Gridsearched Support Vector Machines for several reasons, most importantly, that the Cross Validation Score and  Accuracy Score were the highest above its competitors
-
-The second recommendation is based off both exploratory data analysis. This suggests that offensive prowess is far more important than defensive prowess or special teams. The correlation heat map emphasizes offense over the other groups on a team.
-
-The third recommendation is that Football Outsiders data is probably the best
-
-### **[Capstone, Part 4: Findings + Technical Report][part-4]**
-
-Share your technical findings with your fellow data scientists. Explain your goals, describe modeling choices, evaluate model performance, and discuss results. Data science reporting is technical, but don’t forget that you should tell a compelling story about your data.
-
-- **Requirements**: Summarize your goals and metrics for success, variables of interest, and removal of any outliers or data imputation. Your process description should be concise and relevant to your goals. Summarize statistical analysis, including model selection,  implementation, evaluation, and inference. Be convincing – justify all important decisions! Clearly label plots and visualizations. Include an Executive Summary
-- **Format:** Jupyter Notebook(s)
+As the introduction explains, Bavda Consulting has taken on predicting wins and losses in the NFL to add to the knowledge base surrounding the NFL and its games. This is of course, the holy grail of sports predictions for many reasons.  First of all, this is most popular sport in the U.S. Second, there is probably the most parity in this league than any other. Third, there is alot of unpredictability in the league. Finally, there is so much coordination and complexity with all of the people on the field to make a play successful or not.  Given these difficulties, this is a difficult problem. Moreover, this model was built with publicly available datasets. Having said that, using the wisdom of the crowd, expert judgment, and traditional data, this model has beaten the baseline and achieved the industry standard, which is approximately 66-68 percent. This bodes well in terms of second and third phase of this project Phase 2 will turn this into a multiclassification model with a custom  loss function optimized for moneyline gambling. The third phase will be using recurrent neural nets and reinforcement models to better the model. Regardless of future endeavors, Bavda Consulting can make two key recommendations with this dataset. First, there is a production model recommendation, Second, there is a usage recommendation.
 
 
-### **[Capstone, Part 5: Presentation + Non-Technical Summary][part-5]**
+Production Model Recommendation
+The production model chosen is Gridsearched Voter Classification model for several reasons. First, the accuracy score through cross validation and through the gambling choice was the highest. The visualizations in the confusion matrices and classification metric tables show makes a strong case. 
 
-Take your findings and share a 10 minute presentation that delivers the most important insights from your project to a non-technical audience. Tell us the most interesting story about your data. Break down your process for a novice audience. Make sure to include compelling visuals. Time is short, so be sure to practice and include only the most relevant components of your project.
+Second, the next highest model on the gambling accuracy score is KNN. Since the voter classifer includes KNN as one of the voters and the model works better with KNN as a voter, there is no reason to use KNN alone. Moreover, KNN is a weak learner and a simple model.  The voter classifier includes Adaboost and Gradient boosting, which increases KNN's ability to do better.
 
-- **Requirements**: Convey your goals, limits/assumptions, methods and their justification, findings, and conclusions. Define technical terms. Include graphics and visualizations
-- **Format:** Interactive graphic presentation, website, or slide deck
+Third, while there are better models based on the accuracy in the cross validated sets, the proof is in the pudding. This model did well when we did not already know the outcome. While this could simply be aberration, it is unclear that GS SVM works well in this context. SVM is generally more powerful with high levels of dimensions. There also is not enough data for SVM. 
+
+Model Usage Recommendation
+The first recommendation is that this model is for learning and entertainment purposes. It does not guarantee any result. While gambling is mentioned, no one should believe this is a get rich scheme. However, it is an interesting exercise in a subject that many of us care about and enjoy.
+
+The second recommendation is that instead of focusing on all aspects of the game, concentrate on the offense and its production. While every team in the NFL will argue that all phases in the game are important, offensive potency seems to be a better predictor. Differentiating the type of offensive production would make a big difference in determining who wins. A simple hypothesis would be that passing is more important than running. While defense wins championship is a common refrain, it seems that defense ought to be devalued. It may take a extraordinary defense to make up for a less potent offense. Special Teams seems to be even less important. In the process of feature selection, the increase in accuracy with special teams included was minor. 
+
+The third recommendation is to use Football Outsiders data rather than Pro Football Focus. While Pro Football Focus has much expertise, their data did not seem to add more to the model. While similar variables existed for both datasets, Football Outsiders lead to higher accuracy scores. The wisdom of the crowd, moneyline, was a good predictor. In other words, odds in casinos do a good job of gauging the right margin. 
+
+The fourth recommendation is to gather additional data over time for several reasons. I have approximately 600 data points. In retrospect, 1,600 data points would provide more context. I do intend to take in new data each week to improve the performance while also going further back. All of these models will perform better with more data.
+
+This completes our analysis, conclusion, and recommendations. Please contact Bavda Consulting with any questions, suggestions and comments.
